@@ -28,18 +28,18 @@ request.interceptors.response.use(
 
 export function fetchPlaylist(id: string) {
   return request({
-    url: 'api/playlist/getDetail?id=' + id,
+    url: 'api/playlist?id=' + id,
   })
 }
 
 export function fetchStreaming(id: string, isWorldWide = true) {
   if (isWorldWide) {
     return request({
-      url: 'api/song/streaming?id=' + id,
+      url: 'api/song?id=' + id,
     })
   } else {
     return request({
-      url: 'api/song/streamingproxy?id=' + id,
+      url: 'api/song?id=' + id,
     })
   }
 }
@@ -58,7 +58,7 @@ export function fetchSongInfo(id: string) {
 
 export function fetchSongList(id: string) {
   return request({
-    url: 'api/song/list?id=' + id,
+    url: 'api/playlist?id=' + id,
   })
 }
 
