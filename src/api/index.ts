@@ -28,7 +28,7 @@ request.interceptors.response.use(
 
 export function fetchPlaylist(id: string) {
   return request({
-    url: 'api/playlist?id=' + id,
+    url: 'api/detailplaylist?id=' + id,
   })
 }
 
@@ -52,13 +52,13 @@ export function fetchHome(page = 1) {
 
 export function fetchSongInfo(id: string) {
   return request({
-    url: 'api/song/info?id=' + id,
+    url: 'api/infosong?id=' + id,
   })
 }
 
 export function fetchSongList(id: string) {
   return request({
-    url: 'api/playlist?id=' + id,
+    url: 'api/detailplaylist?id=' + id,
   })
 }
 
@@ -76,7 +76,7 @@ export function fetchKaraokeLyric(link: string) {
 
 export function fetchSuggestion(query: string) {
   return request({
-    url: 'api/suggest?query=' + query,
+    url: 'api/search?keyword=' + query,
   })
 }
 
